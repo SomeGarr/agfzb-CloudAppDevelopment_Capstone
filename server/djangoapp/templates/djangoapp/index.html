@@ -7,5 +7,14 @@
   <h1>Welcome to Best Cars Dealership!</h1>
   <h6>The trusted dealership of North America</h6>
 </div>
+<div class="text-center">
+  {% if user.is_authenticated %}
+    Hi {{ user.username }}
+  {% else %}
+    <p>You are not logged in</p>
+    <p><a href="#">Log In</a></p>
+    <p><a href="#">Sign Up</a></p>
+  {% endif %}
+</div>
 <!--Add a dealer table here -->
 {% endblock content %}
