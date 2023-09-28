@@ -125,3 +125,10 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')
 MEDIA_URL = '/media/'
+
+
+# Login/Logout redirects
+
+LOGIN_REDIRECT_URL = 'djangoapp:index'
+
+LOGOUT_REDIRECT_URL = 'djangoapp:index'
