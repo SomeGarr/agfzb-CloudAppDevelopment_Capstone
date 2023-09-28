@@ -8,6 +8,9 @@ from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
+from django.views import generic
 
 # from .models import related models
 # from .restapis import related methods
@@ -35,8 +38,11 @@ def contact(request):
 # ...
 
 # Create a `registration_request` view to handle sign up request
-# def registration_request(request):
-# ...
+class RegistrationView(generic.CreateView):
+    form_class = UserCreationForm
+    success_url = reverse_lazy('login')
+    template_name = 'djangoapp/registration.html'
+
 
 # Update the `get_dealerships` view to render the index page with a list of dealerships
 def get_dealerships(request):
