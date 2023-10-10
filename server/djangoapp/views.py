@@ -8,10 +8,10 @@ from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
-from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
 
+from .forms import CustomUserCreationForm
 # from .models import related models
 # from .restapis import related methods
 
@@ -39,7 +39,7 @@ def contact(request):
 
 # Create a `registration_request` view to handle sign up request
 class RegistrationView(generic.CreateView):
-    form_class = UserCreationForm
+    form_class = CustomUserCreationForm
     success_url = reverse_lazy('login')
     template_name = 'djangoapp/registration.html'
 
