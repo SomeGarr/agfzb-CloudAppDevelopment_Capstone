@@ -13,6 +13,8 @@
   <script src="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.js"></script>
   <script src="https://unpkg.com/bootstrap-table@1.18.2/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
   <style>
+    {% block styles %}
+    {% endblock styles %}
     .footer {
       padding: 20px
       text-align: center
@@ -25,12 +27,11 @@
       margin-top: 2%;
       margin-left: 0em;
       margin-right: 0em;
-}
+    }
   </style>
 </head>
 
 <body>
-
   <!-- Navigation -->
   <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <!-- Brand -->
@@ -90,6 +91,5 @@
   <footer class="footer">
     <p class="text-center">&copy; 2023 Best Cars Dealership</p>
   </footer>
-
 </body>
 </html>
