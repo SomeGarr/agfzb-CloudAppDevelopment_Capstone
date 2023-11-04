@@ -1,0 +1,78 @@
+/*
+  Custom CSS ~ main.css
+*/
+
+/* Body */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Login/Signup Form */
+.form-head {
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
+
+#id_username, #id_password, #id_password1, #id_password2,
+#id_first_name, #id_last_name {
+  display: block;
+  padding: 0.375rem 0.75rem;
+  min-width: -webkit-fill-available;
+  margin-right: 20px;
+  margin-left: 20px;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+input:active, input:focus {
+  border-color: #80bdff !important;
+}
+
+.login-label {
+  margin-left: 20px;
+}
+
+ul.errorlist.nonfield {
+  color: red;
+}
+
+.sub-btn {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1200px) {
+  .form-head {
+    margin-left: 120px;
+  }
+
+  #id_username, #id_password, #id_password1, #id_password2,
+  #id_first_name, #id_last_name {
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+
+  .login-label {
+    margin-left: 120px;
+  }
+  
+  .sub-btn {
+    margin-left: 120px;
+  }
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: darkgrey;
+  margin-top: auto;
+  margin-left: 0em;
+  margin-right: 0em;
+}

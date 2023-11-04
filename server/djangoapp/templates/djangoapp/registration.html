@@ -1,11 +1,46 @@
 {% extends '_base.html' %}
-{% load static %}
+
+{% block title %}Registration{% endblock title %}
  
 {% block content %}
-<h2>Sign Up</h2>
+<h2 class="form-head">Sign Up</h2>
 <form method="post">
   {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Sign up</button>
+  <div class="form-group">
+    <label class="login-label" for="{{ form.username.id_for_label }}">Username:</label>
+    <div>
+      {{ form.username }}
+      {{ form.username.errors }}
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="login-label" for="{{ form.first_name.id_for_label }}">First name:</label>
+    <div>
+      {{ form.first_name }}
+      {{ form.first_name.errors }}
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="login-label" for="{{ form.last_name.id_for_label }}">Last name:</label>
+    <div>
+      {{ form.last_name }}
+      {{ form.last_name.errors }}
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="login-label" for="{{ form.password1.id_for_label }}">Password:</label>
+    <div>
+      {{ form.password1 }}
+      {{ form.password1.errors }}
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="login-label" for="{{ form.password2.id_for_label }}">Password Confirmation:</label>
+    <div>
+      {{ form.password2 }}
+      {{ form.password2.errors }}
+    </div>
+  </div>
+  <button class="btn btn-primary sub-btn" type="submit">Sign up</button>
 </form>
 {% endblock content %}> 
