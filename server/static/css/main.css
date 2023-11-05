@@ -2,6 +2,7 @@
   Custom CSS ~ main.css
 */
 
+
 /* Body */
 body {
   min-height: 100vh;
@@ -9,8 +10,10 @@ body {
   flex-direction: column;
 }
 
-/* Login/Signup Form */
+
+/* Login/Signup Forms */
 .form-head {
+  margin-top: 16px;
   margin-left: 20px;
   margin-bottom: 16px;
 }
@@ -35,7 +38,7 @@ input:active, input:focus {
   margin-left: 20px;
 }
 
-ul.errorlist.nonfield {
+ul.errorlist , .errorlist.nonfield {
   color: red;
 }
 
@@ -63,6 +66,7 @@ ul.errorlist.nonfield {
     margin-left: 120px;
   }
 }
+
 
 /* Footer */
 .footer {
